@@ -1,0 +1,11 @@
+Way to structure your code to solve common technical problems
+
+Decoupling
+- Simplifying
+
+Design patterns we will be looking at
+- Two stage allocation
+- Singletons
+- Key value coding
+- Key value observing
+- Model view controller 
