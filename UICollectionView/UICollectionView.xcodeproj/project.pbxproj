@@ -15,6 +15,7 @@
 		946F94E51D2D3FD900D88385 /* UICollectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F94E41D2D3FD900D88385 /* UICollectionViewTests.swift */; };
 		946F94F01D2D3FDA00D88385 /* UICollectionViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F94EF1D2D3FDA00D88385 /* UICollectionViewUITests.swift */; };
 		946F95001D2D411600D88385 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F94FF1D2D411600D88385 /* CollectionViewCell.swift */; };
+		94B097DF1D2EE668000E9EBA /* CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B097DE1D2EE668000E9EBA /* CollectionReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		946F94EF1D2D3FDA00D88385 /* UICollectionViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewUITests.swift; sourceTree = "<group>"; };
 		946F94F11D2D3FDA00D88385 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		946F94FF1D2D411600D88385 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		94B097DE1D2EE668000E9EBA /* CollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				946F94D81D2D3FD900D88385 /* LaunchScreen.storyboard */,
 				946F94DB1D2D3FD900D88385 /* Info.plist */,
 				946F94FF1D2D411600D88385 /* CollectionViewCell.swift */,
+				94B097DE1D2EE668000E9EBA /* CollectionReusableView.swift */,
 			);
 			path = UICollectionView;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				TargetAttributes = {
 					946F94CB1D2D3FD900D88385 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = J82UJW37P9;
 					};
 					946F94DF1D2D3FD900D88385 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -260,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				946F94D21D2D3FD900D88385 /* ViewController.swift in Sources */,
+				94B097DF1D2EE668000E9EBA /* CollectionReusableView.swift in Sources */,
 				946F94D01D2D3FD900D88385 /* AppDelegate.swift in Sources */,
 				946F95001D2D411600D88385 /* CollectionViewCell.swift in Sources */,
 			);
@@ -405,6 +410,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = UICollectionView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = buzzfeed.UICollectionView;
@@ -416,6 +422,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = UICollectionView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = buzzfeed.UICollectionView;
@@ -488,6 +495,7 @@
 				946F94F61D2D3FDA00D88385 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		946F94F71D2D3FDA00D88385 /* Build configuration list for PBXNativeTarget "UICollectionViewTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +504,7 @@
 				946F94F91D2D3FDA00D88385 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		946F94FA1D2D3FDA00D88385 /* Build configuration list for PBXNativeTarget "UICollectionViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +513,7 @@
 				946F94FC1D2D3FDA00D88385 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

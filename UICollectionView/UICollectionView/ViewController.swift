@@ -10,10 +10,11 @@ import UIKit
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
+    var headers = ["Yellow Blocks", "Blue Blocks"]
     var items = [[String]]()
     let reuseIdentifier = "cell" // also enter this string as the cell identifier in the storyboard
-    var sectionOneItems = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25"]
-    var sectionTwoItems = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25"]
+    var sectionOneItems = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+    var sectionTwoItems = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
 
     
     
@@ -32,7 +33,16 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     // MARK: - UICollectionViewDataSource protocol
     
-    
+    func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+        switch kind {
+        case UICollectionElementKindSectionHeader:
+            let headerView = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "header", forIndexPath: indexPath) as! CollectionReusableView
+            headerView.label.text = headers[indexPath.section]
+            return headerView
+        default:
+            assert(false, "Unexpected element kind")
+        }
+    }
     
     // tell the collection view how many cells to make
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -53,7 +63,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     // change background color back when user releases touch
     func collectionView(collectionView: UICollectionView, didUnhighlightItemAtIndexPath indexPath: NSIndexPath) {
         let cell = collectionView.cellForItemAtIndexPath(indexPath)
-        cell?.backgroundColor = UIColor.yellowColor()
+        if indexPath.section == 0 {
+            cell?.backgroundColor = UIColor.yellowColor()
+        }
+        else {
+            cell?.backgroundColor = UIColor.lightGrayColor()
+        }
+        
     }
     
     // make a cell for each cell index path
@@ -64,7 +80,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         // Use the outlet in our custom class to get a reference to the UILabel in the cell
         cell.myLabel.text = self.items[indexPath.section][indexPath.item]
-        cell.backgroundColor = UIColor.yellowColor() // make cell more visible in our example project
+        if indexPath.section == 0 {
+            cell.backgroundColor = UIColor.yellowColor()
+        }
+        else {
+            cell.backgroundColor = UIColor.lightGrayColor()
+        }
+        
         cell.layer.borderColor = UIColor.grayColor().CGColor
         cell.layer.borderWidth = 1
         cell.layer.cornerRadius = 8
