@@ -1,3 +1,6 @@
+import sys
+import os.path
+#!usr/bin/env
 from peewee import *
 
 db = SqliteDatabase('students.db')
